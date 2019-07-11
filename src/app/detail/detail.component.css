@@ -1,0 +1,13 @@
+.card-router{
+    cursor: pointer;
+}
+
+.scroll-div{ 
+    overflow-y: scroll;
+    height: 74vh;
+    max-height: 74vh;
+}
+
+.text-center{
+    text-align: center;
+}
