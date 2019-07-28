@@ -120,7 +120,7 @@
         <!-- Content Row -->
         <div class="row">
           <div class="col-xl-4 col-md-6 mb-4" *ngFor="let main of mains">
-            <div class="col-xl-12 col-md-12 mb-4 card-router" routerLink="/detail">
+            <div class="col-xl-12 col-md-12 mb-4 card-router" [routerLink]="['/detail', main.id]">
               <div class="card border-left-primary shadow ">
                 <div class="card-body">
                   <div class="row no-gutters">
