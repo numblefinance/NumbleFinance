@@ -9,6 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { HomeService } from './home/home.service';
+import { FormsModule } from '@angular/forms'
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { HomeService } from './home/home.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],
