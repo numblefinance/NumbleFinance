@@ -9,7 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { HomeService } from './home/home.service';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms'
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    DetailComponent
+    DetailComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
