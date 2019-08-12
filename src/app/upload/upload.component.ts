@@ -53,6 +53,7 @@ export class UploadComponent implements OnInit {
   uploadCSV(){
     this.homeService.uploadCSV(this.regis).subscribe(
       (res) => { 
+        alert(JSON.stringify(res));
         console.dir(res);
       }, // success path
       error => console.log(error) // error path

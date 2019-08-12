@@ -27,7 +27,7 @@ export class HomeService {
     return this.http.post(this.configUrlUser+'/login',{user});
   }
 
-  uploadCSV(body){
-    return this.http.post(this.configUrlMain+'/uploadCSV',{body});
+  uploadCSV(regis){
+    return this.http.post(this.configUrlMain+'/uploadCSV',{regis});
   }
 }
