@@ -10,7 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { HomeService } from './home/home.service';
 import { FormsModule } from '@angular/forms';
-import { FilterPipe } from './filter.pipe'
+import { FilterPipe } from './filter.pipe';
+import { UploadComponent } from './upload/upload.component';
+import { ListUserComponent } from './user/list-user/list-user.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component'
 
 
 @NgModule({
@@ -20,7 +24,11 @@ import { FilterPipe } from './filter.pipe'
     RegisterComponent,
     HomeComponent,
     DetailComponent,
-    FilterPipe
+    FilterPipe,
+    UploadComponent,
+    ListUserComponent,
+    UserCreateComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
