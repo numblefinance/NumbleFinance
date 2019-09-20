@@ -8,6 +8,10 @@ import { UploadComponent } from './upload/upload.component';
 import { ListUserComponent } from './user/list-user/list-user.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component'
+import { ProfileComponent } from './profile/profile.component';
+import { ListComponent } from './admin/company/list/list.component';
+import { CreateComponent } from './admin/company/create/create.component';
+import { EditComponent } from './admin/company/edit/edit.component'
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,6 +22,10 @@ const routes: Routes = [
   { path: 'user-list', component: ListUserComponent },
   { path: 'user-create', component: UserCreateComponent },
   { path: 'user-edit/:id', component: UserEditComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'admin/create', component: CreateComponent },
+  { path: 'admin/list', component: ListComponent },
+  { path: 'admin/edit/:id', component: EditComponent },
 ];
 
 @NgModule({

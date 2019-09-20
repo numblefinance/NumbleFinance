@@ -14,7 +14,11 @@ import { FilterPipe } from './filter.pipe';
 import { UploadComponent } from './upload/upload.component';
 import { ListUserComponent } from './user/list-user/list-user.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
-import { UserEditComponent } from './user/user-edit/user-edit.component'
+import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ListComponent } from './admin/company/list/list.component';
+import { CreateComponent } from './admin/company/create/create.component';
+import { EditComponent } from './admin/company/edit/edit.component'
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { UserEditComponent } from './user/user-edit/user-edit.component'
     UploadComponent,
     ListUserComponent,
     UserCreateComponent,
-    UserEditComponent
+    UserEditComponent,
+    ProfileComponent,
+    ListComponent,
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
