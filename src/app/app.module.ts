@@ -12,8 +12,7 @@ import { HomeService } from './home/home.service';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import { UploadComponent } from './upload/upload.component';
-import { ListUserComponent } from './user/list-user/list-user.component';
-import { UserCreateComponent } from './user/user-create/user-create.component';
+import { ListUserComponent } from './user/list-user/list-user.component'; 
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListComponent } from './admin/company/list/list.component';
@@ -30,8 +29,7 @@ import { EditComponent } from './admin/company/edit/edit.component'
     DetailComponent,
     FilterPipe,
     UploadComponent,
-    ListUserComponent,
-    UserCreateComponent,
+    ListUserComponent, 
     UserEditComponent,
     ProfileComponent,
     ListComponent,

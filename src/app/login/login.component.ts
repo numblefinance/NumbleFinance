@@ -23,13 +23,12 @@ export class LoginComponent implements OnInit {
     console.dir(this.user);
     this.homeService.login(this.user).subscribe(
       (res) => {
-        this.res = res;
+        this.res = res; 
         if (this.res.length == 0) {
-
         } else {
           this.router.navigate(['/home']);
+          localStorage.setItem("id",this.res[0].id); 
         }
-        console.dir(res);
       }, // success path
       error => console.log(error) // error path
     );

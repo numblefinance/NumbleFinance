@@ -27,6 +27,22 @@ export class HomeService {
     return this.http.post(this.configUrlUser+'/login',{user});
   }
 
+  register(user){
+    return this.http.post(this.configUrlUser+'/register',{user});
+  }
+
+  edit(id,user){
+    return this.http.patch(this.configUrlUser+'/'+id,{user});
+  }
+
+  getUsers(){
+    return this.http.get(this.configUrlUser+'/');
+  }
+
+  getUserById(id){
+    return this.http.get(this.configUrlUser+'/'+id);
+  }
+
   uploadCSV(regis){
     return this.http.post(this.configUrlMain+'/uploadCSV',{regis});
   }
