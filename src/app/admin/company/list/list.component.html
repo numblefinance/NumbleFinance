@@ -184,7 +184,11 @@
                       <td>{{item.company}}</td>
                       <td>{{item.count}}</td>
                       <td>{{item.comun}}</td>
-                      <td>D</td> 
+                      <td [routerLink]="['/admin/edit', item.id]">
+                        <img src="assets/img/edit.svg" alt="Edit"
+                          srcset="assets/img/edit.svg 100w, assets/img/edit.svg 200w"
+                          sizes="(min-width: 600px) 200px, 100vw">
+                        </td> 
                     </tr> 
                   </tbody>
                 </table>

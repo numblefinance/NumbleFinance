@@ -20,11 +20,12 @@
         <a class="nav-link" routerLink="/home">
           <i class="fa fa-tachometer"></i>
           <span>Dashboard</span></a>
-      </li> 
+      </li>
+  
   
       <!-- Nav Item - upload -->
       <li class="nav-item ">
-        <a class="nav-link"  routerLink="/upload">
+        <a class="nav-link" routerLink="/upload">
           <i class="fa fa-upload"></i>
           <span>Upload</span></a>
       </li>
@@ -32,13 +33,12 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
-          aria-expanded="false" aria-controls="collapseUser">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false"
+          aria-controls="collapseUser">
           <i class="fa fa-user"></i>
           <span>User</span>
         </a>
-        <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"
-          >
+        <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" routerLink="/profile">Profile</a>
             <a class="collapse-item" routerLink="/signup">Register</a>
@@ -48,13 +48,12 @@
       </li>
   
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany"
-          aria-expanded="false" aria-controls="collapseCompany">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="false"
+          aria-controls="collapseCompany">
           <i class="fa fa-industry"></i>
           <span>Company</span>
         </a>
-        <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"
-          >
+        <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" routerLink="/admin/list">List</a>
             <a class="collapse-item" routerLink="/admin/create">Create</a>
@@ -101,22 +100,22 @@
                 <i class="fa fa-search"></i>
               </a>
               <!-- Dropdown - Messages  
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." [(ngModel)]="searchText"
-                      aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fa fa-search"></i>
-                      </button>
+                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                  aria-labelledby="searchDropdown">
+                  <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." [(ngModel)]="searchText"
+                        aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </form>
-              </div>
-            </li>
-          -->
+                  </form>
+                </div>
+              </li>
+            -->
               <div class="topbar-divider d-none d-sm-block"></div>
   
               <!-- Nav Item - User Information -->
@@ -150,12 +149,69 @@
   
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800">Edit Company</h1>
           </div>
   
           <!-- Content Row -->
           <div class="row">
-      
+  
+            <div class="col-md-12">
+  
+              <div class="card o-hidden border-0 shadow-lg my-1">
+                <div class="card-body p-0">
+                  <!-- Nested Row within Card Body -->
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="p-5">
+                        <form class="user">
+                          <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="text" class="form-control form-control-user" id="ticker" name="ticker"
+                                placeholder="Ticker" [(ngModel)]="company.ticker" required>
+                            </div>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control form-control-user" id="company" name="company"
+                                placeholder="Company Name" [(ngModel)]="company.company" required>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="text" class="form-control form-control-user" id="url" name="url"
+                                placeholder="URL" [(ngModel)]="company.url" required>
+                            </div>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control form-control-user" id="graph1" name="graph1"
+                                placeholder="Graph URL" [(ngModel)]="company.graph1" required>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <input type="text" class="form-control form-control-user" id="graph2" name="graph2"
+                                placeholder="Graph URL" [(ngModel)]="company.graph2" required>
+                            </div>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control form-control-user" id="comun"
+                                name="comun" placeholder="Comun Company" [(ngModel)]="company.comun">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-sm-12 mb-3">
+                              <textarea class="form-control form-control-user" id="description" name="description"
+                              placeholder="Description" [(ngModel)]="company.description" required>
+                              </textarea> 
+                            </div> 
+                          </div>
+                          <a (click)="edit()" class="btn btn-primary btn-user btn-block">
+                            Edit Company
+                          </a>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
           </div>
         </div>
         <!-- /.container-fluid -->

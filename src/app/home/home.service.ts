@@ -46,4 +46,16 @@ export class HomeService {
   uploadCSV(regis){
     return this.http.post(this.configUrlMain+'/uploadCSV',{regis});
   }
+
+  createCompany(company){
+    return this.http.post(this.configUrlMain+'/create',{company});
+  }
+
+  getCompany(id){
+    return this.http.get(this.configUrlMain+'/'+id);
+  }
+
+  editCompany(id,company){ 
+    return this.http.patch(this.configUrlMain+'/'+id,{company});
+  }
 }
