@@ -20,7 +20,7 @@
       <a class="nav-link" routerLink="/home">
         <i class="fa fa-tachometer"></i>
         <span>Dashboard</span></a>
-    </li> 
+    </li>
 
     <!-- Nav Item - upload -->
     <li class="nav-item ">
@@ -30,14 +30,13 @@
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider">
-<li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
-        aria-expanded="false" aria-controls="collapseUser">
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false"
+        aria-controls="collapseUser">
         <i class="fa fa-user"></i>
         <span>User</span>
       </a>
-      <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"
-        >
+      <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <a class="collapse-item" routerLink="/profile">Profile</a>
           <a class="collapse-item" routerLink="/signup">Register</a>
@@ -47,13 +46,12 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany"
-        aria-expanded="false" aria-controls="collapseCompany">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="false"
+        aria-controls="collapseCompany">
         <i class="fa fa-industry"></i>
         <span>Company</span>
       </a>
-      <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"
-        >
+      <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <a class="collapse-item" routerLink="/admin/list">List</a>
           <a class="collapse-item" routerLink="/admin/create">Create</a>
@@ -175,6 +173,73 @@
                   <div class="col-md-12 align-items-center text-justify">
                     <p>{{detail.description}}</p>
                   </div>
+                  <div class="col-md-12 align-items-center text-justify">
+                    <div class="row bootstrap snippets">
+                      <div class="col-md-12 col-md-offset-2 col-sm-12">
+                        <div class="comment-wrapper">
+                          <div class="panel panel-info">
+                            <div class="panel-heading">
+                              Comment panel
+                            </div>
+                            <div class="panel-body">
+                              <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
+                              <br>
+                              <button type="button" class="btn btn-info pull-right">Post</button>
+                              <div class="clearfix"></div>
+                              <hr>
+                              <ul class="media-list">
+                                <li class="media">
+                                  <a href="#" class="pull-left">
+                                    <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-profile">
+                                  </a>
+                                  <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                      <small class="text-muted">Date</small>
+                                    </span>
+                                    <strong class="text-info">User</strong>
+                                    <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                      Lorem ipsum dolor sit amet.
+                                    </p>
+                                  </div>
+                                </li>
+                                <li class="media">
+                                  <a href="#" class="pull-left">
+                                    <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-profile">
+                                  </a>
+                                  <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                      <small class="text-muted">Date 2</small>
+                                    </span>
+                                    <strong class="text-info">User 2</strong>
+                                    <p>
+                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                      Lorem ipsum dolor adipiscing elit.
+                                    </p>
+                                  </div>
+                                </li>
+                                <li class="media">
+                                  <a href="#" class="pull-left">
+                                    <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="img-profile">
+                                  </a>
+                                  <div class="media-body">
+                                    <span class="text-muted pull-right">
+                                      <small class="text-muted">Date 3</small>
+                                    </span>
+                                    <strong class="text-info">User 3</strong>
+                                    <p>
+                                      Lorem ipsum dolor  sit amet, consectetur adipiscing elit.
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -200,7 +265,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <!-- /.container-fluid -->

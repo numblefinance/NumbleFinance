@@ -23,7 +23,7 @@ export class DetailComponent implements OnInit {
     this.homeService.getItemById(id).subscribe(
       (res) => {
         this.detail = res;
-        this.sumCount(this.detail); 
+        this.sumCount(res); 
       }, // success path
       error => console.log(error) // error path
     );
@@ -44,19 +44,20 @@ export class DetailComponent implements OnInit {
     let count = detail.count;
     detail.count= count+1;
     this.detail.count= detail.count;
-    this.homeService.sumCount(detail).subscribe(
-      (ressum) => { 
+    console.dir(detail);
+    this.homeService.editCompany(detail.id,detail).subscribe(
+      (ressum) => {  
         this.homeService.getItemByComun(this.detail.comun).subscribe(
           (rescom) => {
             this.comuns = rescom;
             console.dir(this.comuns);
-
+    
           }, // success path
           error => console.log(error) // error path
         );
-
       }, // success path
       error => console.log(error) // error path
     );
+ 
   }
 }

@@ -20,7 +20,7 @@ export class HomeService {
   }
 
   sumCount(detail) {
-    return this.http.patch(this.configUrlMain+'/' + detail.id, detail);
+    return this.http.patch(this.configUrlMain+'/' + detail.id, {detail});
   }
 
   login(user){
