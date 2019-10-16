@@ -6,6 +6,7 @@ export class HomeService {
 
   constructor(private http:HttpClient) { }
   configUrlMain = 'http://localhost:3000/api/main';
+  configUrlComment = 'http://localhost:3000/api/comment';
   configUrlUser = 'http://localhost:3000/api/user';
   getItems() {
     return this.http.get(this.configUrlMain);
@@ -57,5 +58,17 @@ export class HomeService {
 
   editCompany(id,company){ 
     return this.http.patch(this.configUrlMain+'/'+id,{company});
+  }
+
+  createComment(comment){
+    return this.http.post(this.configUrlComment+'/create',{comment});
+  }
+
+  getComment(id){
+    return this.http.get(this.configUrlComment+'/'+id);
+  }
+
+  editComment(id,comment){ 
+    return this.http.patch(this.configUrlComment+'/'+id,{comment});
   }
 }
