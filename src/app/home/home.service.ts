@@ -67,8 +67,5 @@ export class HomeService {
   getComment(id){
     return this.http.get(this.configUrlComment+'/'+id);
   }
-
-  editComment(id,comment){ 
-    return this.http.patch(this.configUrlComment+'/'+id,{comment});
-  }
+ 
 }

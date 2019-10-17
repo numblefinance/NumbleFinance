@@ -9,8 +9,10 @@ import { HomeService } from '../home/home.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  detail: any;
+  detail: any = {};
   comuns: any;
+  comments:any; 
+  newComment:any= {};
 
   constructor(
     private route: ActivatedRoute,
@@ -19,11 +21,17 @@ export class DetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('id');
+    let id = this.route.snapshot.paramMap.get('id'); 
     this.homeService.getItemById(id).subscribe(
       (res) => {
         this.detail = res;
         this.sumCount(res); 
+        this.homeService.getComment(id).subscribe(
+          (res) => { 
+            this.comments=res; 
+          }, // success path
+          error => console.log(error) // error path
+        );
       }, // success path
       error => console.log(error) // error path
     );
@@ -35,6 +43,17 @@ export class DetailComponent implements OnInit {
       (res) => {
         this.detail = res;
         this.sumCount(this.detail); 
+      }, // success path
+      error => console.log(error) // error path
+    );
+  }
+
+  createComment() { 
+    this.newComment.idCompany = this.detail.id;
+    this.newComment.idUser = 1;
+    this.homeService.createComment(this.newComment).subscribe(
+      (res) => {
+        this.comments.push(this.newComment); 
       }, // success path
       error => console.log(error) // error path
     );

@@ -182,56 +182,26 @@
                               Comment panel
                             </div>
                             <div class="panel-body">
-                              <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
+                              <textarea class="form-control" [(ngModel)]="newComment.comment" placeholder="write a comment..." rows="3"></textarea>
                               <br>
-                              <button type="button" class="btn btn-info pull-right">Post</button>
+                              <button type="button" class="btn btn-info pull-right" (click)="createComment()">Post</button>
                               <div class="clearfix"></div>
                               <hr>
                               <ul class="media-list">
-                                <li class="media">
-                                  <a href="#" class="pull-left">
+                                <li class="media" *ngFor="let item of comments"> 
+                                  <a class="pull-left">
                                     <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-profile">
                                   </a>
                                   <div class="media-body">
                                     <span class="text-muted pull-right">
-                                      <small class="text-muted">Date</small>
+                                      <small class="text-muted">{{item.createdAt | date:'short'}}</small>
                                     </span>
-                                    <strong class="text-info">User</strong>
+                                    <strong class="text-info">{{item.idUser}}</strong>
                                     <p>
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                      Lorem ipsum dolor sit amet.
+                                      {{item.comment}}
                                     </p>
                                   </div>
-                                </li>
-                                <li class="media">
-                                  <a href="#" class="pull-left">
-                                    <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-profile">
-                                  </a>
-                                  <div class="media-body">
-                                    <span class="text-muted pull-right">
-                                      <small class="text-muted">Date 2</small>
-                                    </span>
-                                    <strong class="text-info">User 2</strong>
-                                    <p>
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                      Lorem ipsum dolor adipiscing elit.
-                                    </p>
-                                  </div>
-                                </li>
-                                <li class="media">
-                                  <a href="#" class="pull-left">
-                                    <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="img-profile">
-                                  </a>
-                                  <div class="media-body">
-                                    <span class="text-muted pull-right">
-                                      <small class="text-muted">Date 3</small>
-                                    </span>
-                                    <strong class="text-info">User 3</strong>
-                                    <p>
-                                      Lorem ipsum dolor  sit amet, consectetur adipiscing elit.
-                                    </p>
-                                  </div>
-                                </li>
+                                </li> 
                               </ul>
                             </div>
                           </div>
