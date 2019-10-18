@@ -1,0 +1,62 @@
+  <!-- Sidebar -->
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/home">
+      <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fa fa-laugh-wink"></i>
+      </div>
+      <div class="sidebar-brand-text mx-3">Numble Finance </div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/home">
+        <i class="fa fa-tachometer"></i>
+        <span>Dashboard</span></a>
+    </li>
+
+    <!-- Nav Item - upload -->
+    <li class="nav-item ">
+      <a class="nav-link" routerLink="/upload">
+        <i class="fa fa-upload"></i>
+        <span>Upload</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
+        aria-expanded="false" aria-controls="collapseUser">
+        <i class="fa fa-user"></i>
+        <span>User</span>
+      </a>
+      <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"
+        >
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" routerLink="/profile">Profile</a>
+          <a class="collapse-item" routerLink="/signup">Register</a>
+          <a class="collapse-item" routerLink="/user-list">All</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany"
+        aria-expanded="false" aria-controls="collapseCompany">
+        <i class="fa fa-industry"></i>
+        <span>Company</span>
+      </a>
+      <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"
+        >
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" routerLink="/admin/list">List</a>
+          <a class="collapse-item" routerLink="/admin/create">Create</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <!-- End of Sidebar -->

@@ -17,7 +17,9 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListComponent } from './admin/company/list/list.component';
 import { CreateComponent } from './admin/company/create/create.component';
-import { EditComponent } from './admin/company/edit/edit.component'
+import { EditComponent } from './admin/company/edit/edit.component';
+import { SidebarComponent } from './all/sidebar/sidebar.component';
+import { HeaderComponent } from './all/header/header.component'
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { EditComponent } from './admin/company/edit/edit.component'
     ProfileComponent,
     ListComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    SidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
