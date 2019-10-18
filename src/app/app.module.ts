@@ -19,7 +19,8 @@ import { ListComponent } from './admin/company/list/list.component';
 import { CreateComponent } from './admin/company/create/create.component';
 import { EditComponent } from './admin/company/edit/edit.component';
 import { SidebarComponent } from './all/sidebar/sidebar.component';
-import { HeaderComponent } from './all/header/header.component'
+import { HeaderComponent } from './all/header/header.component' 
+import { NgxUiLoaderModule } from  'ngx-ui-loader';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { HeaderComponent } from './all/header/header.component'
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,    
+    NgxUiLoaderModule,
   ],
   providers: [
     HomeService
