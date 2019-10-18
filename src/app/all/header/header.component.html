@@ -17,6 +17,28 @@
           </button>
         </div>
       </div>
+      <div class="display-search" *ngIf="searchText!=''">
+        <div class="col-xl-12 col-md-12" *ngFor="let main of mains  | filter: searchText">
+          <div class="col-xl-12 col-md-12 mb-4 card-router card-block-search" [routerLink]="['/detail', main.id]">
+            <div class="">
+              <div class="">
+                <div class="display-row"> 
+                  <div class="col-mr-6">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">{{main.ticker}}</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{main.count}}</div>
+                  </div>
+                  <div class="col-mr-4">
+                    <div class="mb-0 text-description">{{main.description  | slice:0:110}}..</div>
+                  </div>
+                  <div class="col-mr-2"> 
+                    <img src="../../../assets/graphs/{{main.url}}.png" style=" max-width: 100px;" alt="..." class="img-thumbnail">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
     </form>
 
     <!-- Topbar Navbar -->

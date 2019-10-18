@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../../home/home.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
+  mains: any;
+  searchText:String="";
+  constructor(private homeService: HomeService) { }
+  
   ngOnInit() {
+    this.homeService.getItems().subscribe(
+      (res) => {
+        this.mains = res; 
+        console.dir(res);
+      },  // success path
+      error =>{
+        console.log(error);  
+      }  // error path
+    );
   }
 
 }

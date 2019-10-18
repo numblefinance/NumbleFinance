@@ -1,0 +1,25 @@
+.display-search{
+    height: 250px;
+    width: 500px;
+    overflow: scroll;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 9999;
+}
+
+.display-row{ 
+    display: flex;
+}
+
+.text-description{ 
+    font-size: 0.7em;
+    text-align: justify;
+    margin: 5%;
+}
+
+.card-block-search{
+    border-top: 1px solid;
+    border-color: #007bff;
+    margin-top: 2%;
+    padding-top: 2%;
+}

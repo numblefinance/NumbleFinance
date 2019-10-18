@@ -10,7 +10,6 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 export class HomeComponent implements OnInit {
 
   mains: any;
-
   constructor(private homeService: HomeService, private ngxService: NgxUiLoaderService) { }
 
   ngOnInit() {
