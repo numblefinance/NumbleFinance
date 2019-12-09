@@ -12,15 +12,16 @@ import { HomeService } from './home/home.service';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import { UploadComponent } from './upload/upload.component';
-import { ListUserComponent } from './user/list-user/list-user.component'; 
+import { ListUserComponent } from './user/list-user/list-user.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListComponent } from './admin/company/list/list.component';
 import { CreateComponent } from './admin/company/create/create.component';
 import { EditComponent } from './admin/company/edit/edit.component';
 import { SidebarComponent } from './all/sidebar/sidebar.component';
-import { HeaderComponent } from './all/header/header.component' 
-import { NgxUiLoaderModule } from  'ngx-ui-loader';
+import { HeaderComponent } from './all/header/header.component';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { NgxUiLoaderModule } from  'ngx-ui-loader';
     DetailComponent,
     FilterPipe,
     UploadComponent,
-    ListUserComponent, 
+    ListUserComponent,
     UserEditComponent,
     ProfileComponent,
     ListComponent,
@@ -45,8 +46,9 @@ import { NgxUiLoaderModule } from  'ngx-ui-loader';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,    
+    AppRoutingModule,
     NgxUiLoaderModule,
+    ChartsModule,
   ],
   providers: [
     HomeService
