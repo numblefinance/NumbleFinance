@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.dir(this.user);
     this.homeService.login(this.user).subscribe(
       (res) => {
         this.res = res; 

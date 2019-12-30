@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
     this.homeService.getItems().subscribe(
       (res) => {
         this.mains = res; 
-        console.dir(res);
       },  // success path
       error =>{
         console.log(error);  

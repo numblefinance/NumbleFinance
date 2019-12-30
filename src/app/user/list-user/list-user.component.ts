@@ -22,7 +22,6 @@ export class ListUserComponent implements OnInit {
     this.homeService.getUsers().subscribe(
       (res) => {
         this.users = res; 
-        console.dir(res);
       }, // success path
       error => console.log(error) // error path
     );

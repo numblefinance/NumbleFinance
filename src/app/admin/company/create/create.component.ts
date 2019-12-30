@@ -22,16 +22,14 @@ export class CreateComponent implements OnInit {
 
 
   register() {
-    console.dir(this.company);
     this.homeService.createCompany(this.company).subscribe(
       (res) => {
         this.res = res;
-        if (this.res.length == 0) {
+        if (this.res.length === 0) {
 
         } else {
         //  this.router.navigate(['/user-list']);
         }
-        console.dir(res);
       }, // success path
       error => console.log(error) // error path
     );

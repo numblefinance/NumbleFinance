@@ -27,14 +27,12 @@ export class EditComponent implements OnInit {
         } else {
         //  this.router.navigate(['/user-list']);
         }
-        console.dir(this.company);
       }, // success path
       error => console.log(error) // error path
     );
   }
 
   edit() {
-    console.dir(this.company);
     this.homeService.editCompany(this.id,this.company).subscribe(
       (res) => {
         this.res = res;
@@ -43,7 +41,6 @@ export class EditComponent implements OnInit {
         } else {
         //  this.router.navigate(['/user-list']);
         }
-        console.dir(res);
       }, // success path
       error => console.log(error) // error path
     );

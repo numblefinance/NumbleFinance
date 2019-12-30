@@ -22,6 +22,7 @@ import { SidebarComponent } from './all/sidebar/sidebar.component';
 import { HeaderComponent } from './all/header/header.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { ChartsModule } from 'ng2-charts';
+import { UploadGraphComponent } from './upload-graph/upload-graph.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ChartsModule } from 'ng2-charts';
     DetailComponent,
     FilterPipe,
     UploadComponent,
+    UploadGraphComponent,
     ListUserComponent,
     UserEditComponent,
     ProfileComponent,

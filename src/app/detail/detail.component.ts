@@ -106,7 +106,7 @@ export class DetailComponent implements OnInit {
         this.homeService.getComment(id).subscribe(
           (resComment) => {
             this.comments = resComment;
-            this.homeService.getChart('AAPL').subscribe(
+            this.homeService.getChart(this.detail.ticker).subscribe(
               (resChart) => {
                 const result: any = resChart;
                 const revenue = result.map(element => {
@@ -182,16 +182,14 @@ export class DetailComponent implements OnInit {
   }
 
   sumCount(detail) {
-    let count = detail.count;
+    const count = detail.count;
     detail.count = count + 1;
     this.detail.count = detail.count;
-    console.dir(detail);
     this.homeService.editCompany(detail.id, detail).subscribe(
       (ressum) => {
         this.homeService.getItemByComun(this.detail.comun).subscribe(
           (rescom) => {
             this.comuns = rescom;
-            console.dir(this.comuns);
 
           }, // success path
           error => console.log(error) // error path

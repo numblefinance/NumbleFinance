@@ -20,12 +20,20 @@
     </li>
 
     <!-- Nav Item - upload -->
-    <li class="nav-item ">
-      <a class="nav-link" routerLink="/upload">
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUpload"
+        aria-expanded="false" aria-controls="collapseUpload">
         <i class="fa fa-upload"></i>
-        <span>Upload</span></a>
+        <span>Upload</span>
+      </a>
+      <div id="collapseUpload" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"
+        >
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" routerLink="/upload">Upload Company</a>
+          <a class="collapse-item" routerLink="/upload-graph">Upload Graphs</a>
+        </div>
+      </div>
     </li>
-
     <!-- Divider -->
     <hr class="sidebar-divider">
     <li class="nav-item">

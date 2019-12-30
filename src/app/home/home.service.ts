@@ -49,6 +49,10 @@ export class HomeService {
     return this.http.post(this.configUrlMain + '/uploadCSV', { regis });
   }
 
+  uploadCSVGraph(regis) {
+    return this.http.post(this.configUrlGraph + '/uploadCSV', { regis });
+  }
+
   createCompany(company) {
     return this.http.post(this.configUrlMain + '/create', { company });
   }
@@ -70,6 +74,6 @@ export class HomeService {
   }
 
   getChart(ticket) {
-    return this.http.get(this.configUrlGraph);
+    return this.http.get(this.configUrlGraph + '/' + ticket);
   }
 }

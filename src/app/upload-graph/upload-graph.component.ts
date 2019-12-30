@@ -3,11 +3,11 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { HomeService } from '../home/home.service';
 
 @Component({
-  selector: 'app-upload',
-  templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.css']
+  selector: 'app-upload-graph',
+  templateUrl: './upload-graph.component.html',
+  styleUrls: ['./upload-graph.component.css']
 })
-export class UploadComponent implements OnInit {
+export class UploadGraphComponent implements OnInit {
   csv: any;
   fileList: Array<any>;
   regis: any = [];
@@ -32,31 +32,33 @@ export class UploadComponent implements OnInit {
         JSON.stringify(this.csv)
         this.fileList = this.csv.split('\r\n');
         this.fileList.forEach(element => {
-          let item = element.split(','); 
+          let item = element.split(',');
           this.regis.push({
             ticker: item[0],
-            company: item[1],
-            count: item[2],
-            graph1: item[3],
-            graph2: item[4],
-            description: item[5].split('-').join(','),
-            comun: item[6],
-            url: item[7]
-          }); 
+            year: item[1],
+            revenue: item[2],
+            costRevenue: item[3],
+            grossProfit: item[4],
+            research: item[5],
+            selling: item[6],
+            other: item[7],
+            incomeTax: item[8],
+            netIncome: item[9]
+          });
         });
-      } 
+      }
       this.regis.shift();
     }
 
   }
 
-  uploadCSV(){
-    this.homeService.uploadCSV(this.regis).subscribe(
-      (res) => { 
+  uploadCSV() {
+    this.homeService.uploadCSVGraph(this.regis).subscribe(
+      (res) => {
         alert(JSON.stringify(res));
       }, // success path
       error => console.log(error) // error path
     );
   }
 
-} 
+}; 

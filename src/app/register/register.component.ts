@@ -22,7 +22,6 @@ export class RegisterComponent implements OnInit {
 
 
   register() {
-    console.dir(this.user);
     this.homeService.register(this.user).subscribe(
       (res) => {
         this.res = res;
@@ -31,7 +30,6 @@ export class RegisterComponent implements OnInit {
         } else {
         //  this.router.navigate(['/user-list']);
         }
-        console.dir(res);
       }, // success path
       error => console.log(error) // error path
     );
